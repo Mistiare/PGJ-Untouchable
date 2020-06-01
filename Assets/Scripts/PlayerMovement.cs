@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 0;
     [SerializeField]
     private float jumpHeight = 0;
-    private bool grounded;
+    [SerializeField]
     private float downDistance;
 
 
@@ -39,29 +39,13 @@ public class PlayerMovement : MonoBehaviour
 
         transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
-        
-        Debug.DrawLine(transform.position, )
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        Vector3 downPoint = new Vector3(transform.position.x, transform.position.y - downDistance, transform.position.z);
+        Debug.DrawLine(transform.position, downPoint, Color.red);
+
+        if (Input.GetKeyDown(KeyCode.Space) && Physics.Linecast(transform.position, downPoint))
         {
             transform.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
-        }
-    }
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.CompareTag("Floor"))
-        {
-            grounded = true;
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.transform.CompareTag("Floor"))
-        {
-            grounded = false;
         }
     }
 }
