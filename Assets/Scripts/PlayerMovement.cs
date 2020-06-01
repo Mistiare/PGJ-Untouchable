@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Vector3 moveVector;
+    [SerializeField]
+    private float speed = 0;
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
-        
+        moveVector = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            moveVector.x = 1;
+        }
+
+        else if (Input.GetKey(KeyCode.S))
+        {
+            moveVector.x = -1;
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveVector.z = -1;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveVector.z = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            moveVector.y = 3;
+        }
+
+        transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
     }
 }
