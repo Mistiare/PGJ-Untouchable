@@ -61,6 +61,7 @@ public class EnemyPatrol : MonoBehaviour
         else
         {
             moveDir = Vector3.zero;
+            currentWayPoint = (currentWayPoint + 1) % wayPoints.Length;
         }
     }
 

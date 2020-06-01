@@ -245,7 +245,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPoints:
   - {fileID: 1459732630}
-  rotationSpeed: 30
+  - {fileID: 1549499354}
+  - {fileID: 512258174}
+  - {fileID: 992060369}
+  rotationSpeed: 10
   moveForce: 10
 --- !u!136 &866648253
 CapsuleCollider:
