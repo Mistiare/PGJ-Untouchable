@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 0;
     private bool grounded;
+    private float downDistance;
 
 
     void FixedUpdate()
@@ -39,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
         transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
         
+        Debug.DrawLine(transform.position, )
+
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             transform.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
