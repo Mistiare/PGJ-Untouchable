@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 0;
     [SerializeField]
-    private float downDistance;
+    private float downDistance = 0;
 
 
     void FixedUpdate()
@@ -47,5 +47,11 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
         }
+    }
+
+
+    public void wind(Vector3 windDistance, float windSpeed)
+    {
+        transform.GetComponent<Rigidbody>().AddForce(windDistance * windSpeed, ForceMode.Force);
     }
 }
