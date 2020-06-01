@@ -1,12 +1,22 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    private Rigidbody rb;
+    private Vector3 moveDir;
+
     [SerializeField]
     private Transform[] wayPoints;
-    private int destPoint;
+    private int currentWayPoint;
+
+    [SerializeField]
+    private float rotationSpeed;
+    [SerializeField]
+    private float moveForce;
+
+    private bool isMoving;
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -15,26 +25,43 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Start()
     {
-        agent = this.GetComponent<NavMeshAgent>();
-        NextWayPoint();
+        rb = this.GetComponent<Rigidbody>();
+        currentWayPoint = 0;
+        moveDir = Vector3.zero;
     }
 
     private void Update()
     {
-     if (!agent.pathPending && agent.remainingDistance <= 0.5f)
-        {
-            NextWayPoint();
-        }
+        NextWayPoint();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(moveDir * moveForce);
     }
 
     private void NextWayPoint()
     {
-        if (wayPoints.Length == 0)
+        if (Vector3.Distance(wayPoints[currentWayPoint].position, this.transform.position) > 1f)
         {
-            return;
-        }
-        agent.destination = wayPoints[destPoint].position;
+            Vector3 direction = wayPoints[currentWayPoint].position - this.transform.position;
+            direction.y = 0f;
 
-        destPoint = (destPoint + 1) % wayPoints.Length;
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
+            if (direction.magnitude > .8)
+            {
+                moveDir = direction.normalized;
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+        }
+        else
+        {
+            moveDir = Vector3.zero;
+        }
     }
+
 }
