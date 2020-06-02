@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShootingEnemy : EnemyAI
 {
+    [SerializeField]
+    private float bulletTimer;
     protected override void Tartgeting()
     {
         Vector3 direction = player.transform.position - this.transform.position;
@@ -22,7 +24,7 @@ public class ShootingEnemy : EnemyAI
                 nextFire = Time.time + fireRate;
                 GameObject bullet = Instantiate(projectile, bulletSpawn.position, bulletSpawn.rotation);
                 bullet.GetComponent<Rigidbody>().AddForce(shootDirection * bulletSpeed);
-                Destroy(bullet.gameObject, 5f);
+                Destroy(bullet.gameObject, bulletTimer);
             }
         }
     }
