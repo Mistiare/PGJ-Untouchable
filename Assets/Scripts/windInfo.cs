@@ -9,7 +9,7 @@ public class windInfo : MonoBehaviour
     [SerializeField]
     private float speed = 0;
     [SerializeField]
-    private Transform player;
+    private Transform player = null;
     private bool colliding;
 
 
