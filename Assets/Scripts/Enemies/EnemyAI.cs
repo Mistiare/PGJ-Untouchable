@@ -93,7 +93,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (isMoving && isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         }
         if (isMoving)
         {

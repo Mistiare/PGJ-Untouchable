@@ -378,7 +378,7 @@ MonoBehaviour:
   groundDistance: 1
   rotationSpeed: 10
   moveForce: 10
-  jumpForce: 8
+  jumpForce: 7
   player: {fileID: 635383208}
   projectile: {fileID: 5520011986965604240, guid: 69292fcfdfda2784b878a268e27f296b,
     type: 3}
