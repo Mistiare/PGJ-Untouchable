@@ -374,7 +374,7 @@ MonoBehaviour:
   - {fileID: 992060369}
   groundMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
   groundDistance: 1
   rotationSpeed: 10
   moveForce: 10
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 998722336}
   - component: {fileID: 998722335}
   - component: {fileID: 998722334}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
