@@ -11,7 +11,8 @@ public class TriggerArea : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(this.transform.position, this.GetComponent<BoxCollider>().size);
+        Gizmos.matrix = this.transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
     }
     private void OnTriggerEnter(Collider other)
     {
