@@ -64,6 +64,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         rb = this.GetComponent<Rigidbody>();
+        GameEvents.current.OnEnemyTriggerEnter += ChangeState;
         currentWayPoint = 0;
         moveDir = Vector3.zero;
     }
@@ -128,4 +129,8 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+    private void ChangeState()
+    {
+        state = EnemyState.shooting;
+    }
 }
