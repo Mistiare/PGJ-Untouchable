@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private EnemyState state;
     [SerializeField]
-    private int id;
+    private int id = 0;
 
     private enum EnemyState 
     {
