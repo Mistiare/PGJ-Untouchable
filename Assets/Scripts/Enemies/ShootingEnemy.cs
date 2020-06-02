@@ -6,6 +6,8 @@ public class ShootingEnemy : EnemyAI
 {
     [SerializeField]
     private float bulletTimer;
+    [SerializeField]
+    private float range;
     protected override void Tartgeting()
     {
         Vector3 direction = player.transform.position - this.transform.position;
@@ -16,7 +18,7 @@ public class ShootingEnemy : EnemyAI
         playerDist = this.transform.position - player.transform.position;
         playerDist.y = 0f;
 
-        if (playerDist.magnitude < 10f)
+        if (playerDist.magnitude < range)
         {
             if (Time.time > nextFire)
             {

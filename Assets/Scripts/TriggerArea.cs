@@ -15,6 +15,9 @@ public class TriggerArea : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        GameEvents.current.EnemyTriggerEnter(id);
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            GameEvents.current.EnemyTriggerEnter(id);
+        }
     }
 }
