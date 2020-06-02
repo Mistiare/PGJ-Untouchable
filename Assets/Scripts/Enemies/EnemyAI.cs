@@ -103,26 +103,33 @@ public class EnemyAI : MonoBehaviour
 
     private void NextWayPoint()
     {
-        if (Vector3.Distance(wayPoints[currentWayPoint].position, this.transform.position) > 2f)
+        if(wayPoints != null)
         {
-            Vector3 direction = wayPoints[currentWayPoint].position - this.transform.position;
-            direction.y = 0f;
-
-            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
-            if (direction.magnitude > .8)
+            if (Vector3.Distance(wayPoints[currentWayPoint].position, this.transform.position) > 2f)
             {
-                moveDir = direction.normalized;
-                isMoving = true;
+                Vector3 direction = wayPoints[currentWayPoint].position - this.transform.position;
+                direction.y = 0f;
+
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+                if (direction.magnitude > .8)
+                {
+                    moveDir = direction.normalized;
+                    isMoving = true;
+                }
+                else
+                {
+                    isMoving = false;
+                }
             }
             else
             {
-                isMoving = false;
+                moveDir = Vector3.zero;
+                currentWayPoint = (currentWayPoint + 1) % wayPoints.Length;
             }
         }
         else
         {
-            moveDir = Vector3.zero;
-            currentWayPoint = (currentWayPoint + 1) % wayPoints.Length;
+            return;
         }
     }
 
