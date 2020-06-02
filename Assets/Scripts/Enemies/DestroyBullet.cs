@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyBullet : MonoBehaviour
 {
     [SerializeField]
-    private float trailTimer;
+    private float trailTimer = 0f;
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);

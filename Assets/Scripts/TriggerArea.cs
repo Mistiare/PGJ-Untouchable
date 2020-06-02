@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerArea : MonoBehaviour
 {
     [SerializeField]
-    private int id;
+    private int id = 0;
     private BoxCollider boxCollider;
 
     private void OnDrawGizmos()

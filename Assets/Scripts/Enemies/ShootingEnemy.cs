@@ -5,9 +5,9 @@ using UnityEngine;
 public class ShootingEnemy : EnemyAI
 {
     [SerializeField]
-    private float bulletTimer;
+    private float bulletTimer = 0f;
     [SerializeField]
-    private float range;
+    private float range = 0f;
     protected override void Tartgeting()
     {
         Vector3 direction = player.transform.position - this.transform.position;
