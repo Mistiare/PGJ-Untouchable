@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerArea : MonoBehaviour
 {
     [SerializeField]
-    private int id;
+    private int id = 0;
     private BoxCollider boxCollider;
 
     private void OnDrawGizmos()
@@ -15,6 +15,9 @@ public class TriggerArea : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        GameEvents.current.EnemyTriggerEnter(id);
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            GameEvents.current.EnemyTriggerEnter(id);
+        }
     }
 }
