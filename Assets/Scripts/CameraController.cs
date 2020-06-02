@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float camSpeed = 0;
     [SerializeField]
+    private float rotateSpeed = 0;
+    [SerializeField]
     private float height = 0;
 
 
@@ -22,10 +24,8 @@ public class CameraController : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.LookAt(player.position);
-
         if (Vector3.Distance(player.position, transform.position) < cameraDist - cushion)
         {
             transform.position -= new Vector3(transform.forward.x, 0, transform.forward.z) * camSpeed;
@@ -46,5 +46,9 @@ public class CameraController : MonoBehaviour
         {
             transform.position -= Vector3.up * camSpeed;
         }
+
+        transform.position += transform.right * Input.GetAxis("Mouse X") * rotateSpeed;
+
+        transform.LookAt(player.position);
     }
 }
