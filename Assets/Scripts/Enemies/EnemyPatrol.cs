@@ -7,14 +7,22 @@ public class EnemyPatrol : MonoBehaviour
 
     [SerializeField]
     private Transform[] wayPoints;
+    [SerializeField]
+    private LayerMask groundMask;
     private int currentWayPoint;
+    [SerializeField]
+    private float groundDistance;
+
 
     [SerializeField]
     private float rotationSpeed;
     [SerializeField]
     private float moveForce;
+    [SerializeField]
+    private float jumpForce;
 
     private bool isMoving;
+    private bool isGrounded;
 
 
     private void OnDrawGizmos()
@@ -32,17 +40,22 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Update()
     {
+        isGrounded = Physics.Raycast(this.transform.position, Vector3.down, groundDistance);
         NextWayPoint();
     }
 
     private void FixedUpdate()
     {
+        if (isMoving && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
         rb.AddForce(moveDir * moveForce);
     }
 
     private void NextWayPoint()
     {
-        if (Vector3.Distance(wayPoints[currentWayPoint].position, this.transform.position) > 1f)
+        if (Vector3.Distance(wayPoints[currentWayPoint].position, this.transform.position) > 2f)
         {
             Vector3 direction = wayPoints[currentWayPoint].position - this.transform.position;
             direction.y = 0f;
