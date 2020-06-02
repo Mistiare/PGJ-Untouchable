@@ -178,7 +178,7 @@ MonoBehaviour:
   rotationSpeed: 10
   moveForce: 10
   jumpForce: 7
-  player: {fileID: 0}
+  player: {fileID: 40186879399202477, guid: aeb4ad99f7542644e9fcfded396d6ef4, type: 3}
   projectile: {fileID: 5520011986965604240, guid: 69292fcfdfda2784b878a268e27f296b,
     type: 3}
   bulletSpawn: {fileID: 1354246667320971079}
@@ -187,6 +187,7 @@ MonoBehaviour:
   errorMargin: 1
   state: 0
   id: 1
+  bulletTimer: 2
 --- !u!54 &1354246667638578923
 Rigidbody:
   m_ObjectHideFlags: 0
