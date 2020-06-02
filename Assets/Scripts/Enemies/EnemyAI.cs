@@ -103,7 +103,7 @@ public class EnemyAI : MonoBehaviour
 
     private void NextWayPoint()
     {
-        if(wayPoints != null)
+        if(wayPoints.Length > 0)
         {
             if (Vector3.Distance(wayPoints[currentWayPoint].position, this.transform.position) > 2f)
             {
