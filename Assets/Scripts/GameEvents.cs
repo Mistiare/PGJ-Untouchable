@@ -13,12 +13,12 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action OnEnemyTriggerEnter;
-    public void EnemyTriggerEnter()
+    public event Action<int> OnEnemyTriggerEnter;
+    public void EnemyTriggerEnter(int id)
     {
         if (OnEnemyTriggerEnter != null)
         {
-            OnEnemyTriggerEnter();
+            OnEnemyTriggerEnter(id);
         }
     }
 }

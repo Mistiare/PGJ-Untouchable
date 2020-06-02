@@ -41,9 +41,11 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     protected float errorMargin;
 
-
+    [Header("State Shit")]
     [SerializeField]
     private EnemyState state;
+    [SerializeField]
+    private int id;
 
     private enum EnemyState 
     {
@@ -129,8 +131,11 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void ChangeState()
+    private void ChangeState(int id)
     {
-        state = EnemyState.shooting;
+        if (id == this.id)
+        {
+            state = EnemyState.shooting;
+        }
     }
 }

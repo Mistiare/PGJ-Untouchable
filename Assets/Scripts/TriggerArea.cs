@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
+    [SerializeField]
+    private int id;
     private void OnTriggerEnter(Collider other)
     {
-        GameEvents.current.EnemyTriggerEnter();
+        GameEvents.current.EnemyTriggerEnter(id);
     }
 }
