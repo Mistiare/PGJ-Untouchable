@@ -6,6 +6,9 @@ public class ExplodingEnemy : EnemyAI
     private float explosiveForce = 0f;
     [SerializeField]
     private float explosiveRadius = 0f;
+    [SerializeField]
+    private GameObject explosion;
+
     protected override void Exploding()
     {
         Vector3 direction = player.transform.position - this.transform.position;
@@ -27,8 +30,8 @@ public class ExplodingEnemy : EnemyAI
         }
         if (playerDist.magnitude < range)
         {
+            GameObject explosive = Instantiate(explosion, this.transform.position, this.transform.rotation);
             player.GetComponent<Rigidbody>().AddExplosionForce(explosiveForce, this.transform.position, explosiveRadius);
-            Debug.Log("Explode");
             Destroy(this.gameObject);
         }
     }

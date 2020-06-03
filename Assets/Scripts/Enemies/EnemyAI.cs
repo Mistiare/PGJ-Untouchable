@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     protected Rigidbody rb;
-    protected Vector3 moveDir;
+    protected Vector3 moveDir = new Vector3 (0f, 0f, 0f);
 
     [Header("Movement Shit")]
     [SerializeField]
