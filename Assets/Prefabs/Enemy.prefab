@@ -182,9 +182,9 @@ MonoBehaviour:
   projectile: {fileID: 5520011986965604240, guid: 69292fcfdfda2784b878a268e27f296b,
     type: 3}
   bulletSpawn: {fileID: 1354246667320971079}
-  bulletSpeed: 200
+  bulletSpeed: 0.03
   fireRate: 2
-  errorMargin: 1
+  errorMargin: 0.3
   state: 0
   id: 1
   bulletTimer: 2
