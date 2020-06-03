@@ -592,6 +592,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 793057330368066187}
+    - target: {fileID: 6008020578613624501, guid: d21c7e37969232442b5edda1831fa38d,
+        type: 3}
+      propertyPath: maxHeight
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008020578613624501, guid: d21c7e37969232442b5edda1831fa38d,
+        type: 3}
+      propertyPath: minHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008020578613624501, guid: d21c7e37969232442b5edda1831fa38d,
+        type: 3}
+      propertyPath: targetHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008020578613624501, guid: d21c7e37969232442b5edda1831fa38d,
+        type: 3}
+      propertyPath: raiseSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21c7e37969232442b5edda1831fa38d, type: 3}
 --- !u!4 &7474917618878563512
