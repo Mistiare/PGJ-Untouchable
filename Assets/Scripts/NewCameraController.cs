@@ -44,6 +44,6 @@ public class NewCameraController : MonoBehaviour
             cam.position += new Vector3(0, newX, 0);
         }
 
-        cam.LookAt(new Vector3(transform.position.x, targetHeight, transform.position.z));
+        cam.LookAt(new Vector3(transform.position.x, transform.position.y + targetHeight, transform.position.z));
     }
 }
