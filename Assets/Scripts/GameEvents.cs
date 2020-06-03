@@ -14,20 +14,11 @@ public class GameEvents : MonoBehaviour
     }
 
     public event Action<int> OnEnemyTriggerEnter;
-    public event Action OnPlayerMove;
     public void EnemyTriggerEnter(int id)
     {
         if (OnEnemyTriggerEnter != null)
         {
             OnEnemyTriggerEnter(id);
-        }
-    }
-
-    public void PlayerMove()
-    {
-        if(OnPlayerMove != null)
-        {
-            OnPlayerMove();
         }
     }
 }

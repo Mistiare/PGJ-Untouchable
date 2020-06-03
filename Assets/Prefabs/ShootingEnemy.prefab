@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354246666706008499}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: ShootingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,17 +178,17 @@ MonoBehaviour:
   rotationSpeed: 10
   moveForce: 10
   jumpForce: 7
+  range: 30
   player: {fileID: 40186879399202477, guid: aeb4ad99f7542644e9fcfded396d6ef4, type: 3}
+  state: 0
+  id: 1
   projectile: {fileID: 5520011986965604240, guid: 69292fcfdfda2784b878a268e27f296b,
     type: 3}
   bulletSpawn: {fileID: 1354246667320971079}
   bulletSpeed: 0.03
   fireRate: 2
   errorMargin: 0.3
-  state: 0
-  id: 1
   bulletTimer: 2
-  range: 30
 --- !u!54 &1354246667638578923
 Rigidbody:
   m_ObjectHideFlags: 0

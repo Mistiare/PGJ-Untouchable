@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class ShootingEnemy : EnemyAI
 {
+    [Header("Targeting Shit")]
+    [SerializeField]
+    protected GameObject projectile;
+    [SerializeField]
+    protected Transform bulletSpawn;
+    [SerializeField]
+    protected float bulletSpeed;
+    [SerializeField]
+    protected float fireRate;
+    protected float nextFire;
+    [SerializeField]
+    protected float errorMargin;
     [SerializeField]
     private float bulletTimer = 0f;
-    [SerializeField]
-    private float range = 0f;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(player.transform.position, errorMargin);
+    }
+
     protected override void Tartgeting()
     {
         Vector3 direction = player.transform.position - this.transform.position;
@@ -28,6 +45,14 @@ public class ShootingEnemy : EnemyAI
                 bullet.GetComponent<Rigidbody>().AddForce(shootDirection * bulletSpeed);
                 Destroy(bullet.gameObject, bulletTimer);
             }
+        }
+    }
+
+    protected override void ChangeState(int id)
+    {
+        if (id == this.id)
+        {
+            state = EnemyState.shooting;
         }
     }
 }

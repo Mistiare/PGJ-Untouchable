@@ -22,35 +22,28 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     protected float jumpForce;
 
-    private bool isMoving;
-    private bool isGrounded;
 
-    [Header("Targeting Shit")]
-    [SerializeField]
-    protected GameObject player;
-    [SerializeField]
-    protected GameObject projectile;
-    [SerializeField]
-    protected Transform bulletSpawn;
     protected Vector3 playerDist;
     [SerializeField]
-    protected float bulletSpeed;
+    protected float range = 0f;
+
+    protected bool isMoving;
+    private bool isGrounded;
+
     [SerializeField]
-    protected float fireRate;
-    protected float nextFire;
-    [SerializeField]
-    protected float errorMargin;
+    protected GameObject player;
 
     [Header("State Shit")]
     [SerializeField]
-    private EnemyState state;
+    protected EnemyState state;
     [SerializeField]
-    private int id = 0;
+    protected int id = 0;
 
-    private enum EnemyState 
+    protected enum EnemyState 
     {
         patrol,
-        shooting
+        shooting,
+        exploding
     }
 
 
@@ -59,8 +52,6 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(this.transform.position, transform.forward);
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(player.transform.position, errorMargin);
     }
 
     private void Start()
@@ -83,6 +74,9 @@ public class EnemyAI : MonoBehaviour
                 moveDir = Vector3.zero;
                 isMoving = false;
                 Tartgeting();
+                break;
+            case EnemyState.exploding:
+                Exploding();
                 break;
         }
 
@@ -138,11 +132,13 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void ChangeState(int id)
+    protected virtual void Exploding()
     {
-        if (id == this.id)
-        {
-            state = EnemyState.shooting;
-        }
+
+    }
+
+    protected virtual void ChangeState(int id)
+    {
+
     }
 }
