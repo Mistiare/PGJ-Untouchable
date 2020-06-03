@@ -34,12 +34,12 @@ public class NewCameraController : MonoBehaviour
 
         float newX = Input.GetAxis("Mouse Y") * raiseSpeed;
 
-        if (cam.position.y < maxHeight && newX > 0)
+        if (cam.position.y < transform.position.y + maxHeight && newX > 0)
         {
             cam.position += new Vector3(0, newX, 0);
         }
 
-        if (cam.position.y > minHeight && newX < 0)
+        if (cam.position.y > transform.position.y + minHeight && newX < 0)
         {
             cam.position += new Vector3(0, newX, 0);
         }
