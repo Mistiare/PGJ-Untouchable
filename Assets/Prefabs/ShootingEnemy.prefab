@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354246666706008499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShootingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354246667320971079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spawnpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 1354246667638578838}
   - component: {fileID: 1354246667638578832}
   - component: {fileID: 1354246667638578923}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Player
   m_Icon: {fileID: 0}
