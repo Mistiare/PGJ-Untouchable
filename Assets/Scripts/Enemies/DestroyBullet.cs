@@ -14,8 +14,8 @@ public class DestroyBullet : MonoBehaviour
         {
             Debug.Log("Hit PLayer");
             collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * playerForce);
-            Destroy(this.gameObject);
         }
+        Destroy(this.gameObject);
     }
 
     private void Update()
