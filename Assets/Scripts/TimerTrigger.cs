@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class TimerTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public enum triggerStates {Start, Finish}
+    public triggerStates triggerID;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void OnTriggerEnter(Collider other)
     {
-        
+        if (triggerID == triggerStates.Start)
+        {
+            transform.parent.GetComponent<Timer>().StartTimer();
+        }
+
+        if (triggerID == triggerStates.Finish)
+        {
+            transform.parent.GetComponent<Timer>().EndTimer();
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    private float timer = 0;
+    public float timer = 0;
     private bool isTiming;
 
 
