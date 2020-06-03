@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float downDistance = 0;
     [SerializeField]
-    private Transform camera = null;
+    private Transform cameraPoint = null;
 
 
     void FixedUpdate()
@@ -21,23 +21,27 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            moveVector.x = camera.forward.x;
+            moveVector.x += cameraPoint.forward.x;
+            moveVector.z += cameraPoint.forward.z;
         }
 
         else if (Input.GetKey(KeyCode.S))
         {
-            moveVector.x = -camera.forward.x;
+            moveVector.x -= cameraPoint.forward.x;
+            moveVector.z -= cameraPoint.forward.z;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            moveVector.z = -camera.forward.z;
+            moveVector.x += cameraPoint.right.x;
+            moveVector.z += cameraPoint.right.z;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            moveVector.z = camera.forward.z;
-        }       
+            moveVector.x -= cameraPoint.right.x;
+            moveVector.z -= cameraPoint.right.z;
+        }
 
         transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
