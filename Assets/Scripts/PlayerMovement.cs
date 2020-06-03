@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float jumpHeight = 0;
     [SerializeField]
     private float downDistance = 0;
+    [SerializeField]
+    private Transform camera = null;
 
 
     void FixedUpdate()
@@ -19,22 +21,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            moveVector.x = 1;
+            moveVector.x = camera.forward.x;
         }
 
         else if (Input.GetKey(KeyCode.S))
         {
-            moveVector.x = -1;
+            moveVector.x = -camera.forward.x;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            moveVector.z = -1;
+            moveVector.z = -camera.forward.z;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            moveVector.z = 1;
+            moveVector.z = camera.forward.z;
         }       
 
         transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
