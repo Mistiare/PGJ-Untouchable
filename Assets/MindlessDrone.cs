@@ -21,7 +21,7 @@ public class MindlessDrone : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        moveDir = this.transform.forward;
+        moveDir = new Vector3 (Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
     }
 
     private void FixedUpdate() 
@@ -35,7 +35,6 @@ public class MindlessDrone : MonoBehaviour
         if(collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
         {
             Debug.Log("HElp");
-            //moveDir = -moveDir;
             moveDir = Vector3.Reflect(moveDir, collision.contacts[0].normal);
             Debug.Log(collision.contacts);
         }
