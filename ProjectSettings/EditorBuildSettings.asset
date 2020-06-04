@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: aff02e3d590a49845ab22e2fa2b07427
+  - enabled: 1
+    path: Assets/Scenes/TumbleTown_L1.unity
+    guid: 48de83d8c7a556f4f8b2166a2498be07
+  - enabled: 1
+    path: Assets/Scenes/TumbleTown_L2.unity
+    guid: e247dd35dda8a3a47876ce386d2cd78f
+  - enabled: 1
+    path: Assets/Scenes/TumbleTown_L3.unity
+    guid: c0abf31b86ebe1340a1cd4a466c1bbdc
+  - enabled: 1
+    path: Assets/Scenes/TumbleTown_L4.unity
+    guid: ab03cf8c16532a648af20db354930bf9
   m_configObjects: {}
