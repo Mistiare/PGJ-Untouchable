@@ -7,15 +7,14 @@ public class MindlessDrone : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private float moveForce = 0f;
-    [SerializeField]
     private Vector3 moveDir;
     [SerializeField]
-    private float jumpHeight;
+    private float jumpHeight = 0f;
     private bool isGrounded;
     [SerializeField]
-    private float groundDistance;
+    private float groundDistance = 0f;
     [SerializeField]
-    private LayerMask groundMask;
+    private LayerMask groundMask = 0;
 
     private void OnDrawGizmos()
     {

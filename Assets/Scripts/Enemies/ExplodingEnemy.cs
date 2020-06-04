@@ -7,7 +7,7 @@ public class ExplodingEnemy : EnemyAI
     [SerializeField]
     private float explosiveRadius = 0f;
     [SerializeField]
-    private GameObject explosion;
+    private GameObject explosion = null;
 
     protected override void Exploding()
     {
