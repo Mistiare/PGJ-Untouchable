@@ -51,7 +51,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && Physics.Linecast(transform.position, downPoint))
         {
-            transform.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+           transform.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+           //increase jump height if used
+           // transform.GetComponent<Rigidbody>().velocity = new Vector3(this.GetComponent<Rigidbody>().velocity.x, jumpHeight, this.GetComponent<Rigidbody>().velocity.z);
         }
     }
 

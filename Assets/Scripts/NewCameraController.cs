@@ -6,10 +6,8 @@ public class NewCameraController : MonoBehaviour
 {
     [SerializeField]
     private Transform player = null;
-    [SerializeField]
-    private float rotateSpeed = 0;
-    [SerializeField]
-    private float raiseSpeed = 0;
+    public float rotateSpeed = 0;
+    public float raiseSpeed = 0;
     [SerializeField]
     private float maxHeight = 0;
     [SerializeField]
