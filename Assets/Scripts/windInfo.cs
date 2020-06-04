@@ -13,11 +13,14 @@ public class windInfo : MonoBehaviour
     private bool colliding;
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (colliding)
         {
-            player.GetComponent<PlayerMovement>().wind(direction, speed);
+            Vector3 pointX = transform.TransformPoint(direction);           
+            pointX -= transform.position;
+
+            player.GetComponent<PlayerMovement>().wind(pointX, speed);
         }
     }
 
