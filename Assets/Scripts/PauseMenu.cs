@@ -7,9 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject pauseMenu = null;
+    [SerializeField]
+    private GameObject optionsMenu = null;
     private void Start()
     {
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
     }
 
     void Update()
@@ -30,6 +33,12 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public void Options()
+    {
+        pauseMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+    }
+
     public void Menu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -40,4 +49,5 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("QUIT");
         Application.Quit();
     }
+
 }
