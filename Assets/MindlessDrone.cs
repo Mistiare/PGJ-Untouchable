@@ -10,7 +10,12 @@ public class MindlessDrone : MonoBehaviour
     [SerializeField]
     private Vector3 moveDir;
     [SerializeField]
-    private float rotationSpeed = 0f;
+    private float jumpHeight;
+    private bool isGrounded;
+    [SerializeField]
+    private float groundDistance;
+    [SerializeField]
+    private LayerMask groundMask;
 
     private void OnDrawGizmos()
     {
@@ -26,8 +31,13 @@ public class MindlessDrone : MonoBehaviour
 
     private void FixedUpdate() 
     {
+        isGrounded = Physics.Raycast(this.transform.position, Vector3.down, groundDistance, groundMask);
         rb.AddForce(moveDir.normalized * moveForce);
         this.transform.rotation = Quaternion.LookRotation(moveDir);
+        if (isGrounded)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,6 +46,7 @@ public class MindlessDrone : MonoBehaviour
         {
             Debug.Log("HElp");
             moveDir = Vector3.Reflect(moveDir, collision.contacts[0].normal);
+            moveDir.y = 0f;
             Debug.Log(collision.contacts);
         }
     }
