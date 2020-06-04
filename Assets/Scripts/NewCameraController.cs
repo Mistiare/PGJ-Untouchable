@@ -6,8 +6,10 @@ public class NewCameraController : MonoBehaviour
 {
     [SerializeField]
     private Transform player = null;
-    public float rotateSpeed = 0;
-    public float raiseSpeed = 0;
+    [SerializeField]
+    private float rotateSpeed = 0;
+    [SerializeField]
+    private float raiseSpeed = 0;
     [SerializeField]
     private float maxHeight = 0;
     [SerializeField]
@@ -15,7 +17,7 @@ public class NewCameraController : MonoBehaviour
     [SerializeField]
     private float targetHeight = 0;
     private Transform cam;
-
+    public float sensitivity = 1f;
 
     void Start()
     {
@@ -27,10 +29,10 @@ public class NewCameraController : MonoBehaviour
     {
         transform.position = player.position;
 
-        float newY = Input.GetAxis("Mouse X") * rotateSpeed;
+        float newY = Input.GetAxis("Mouse X") * rotateSpeed * sensitivity;
         transform.Rotate(new Vector3(0, newY, 0));
 
-        float newX = Input.GetAxis("Mouse Y") * raiseSpeed;
+        float newX = Input.GetAxis("Mouse Y") * raiseSpeed * sensitivity;
 
         if (cam.position.y < transform.position.y + maxHeight && newX > 0)
         {

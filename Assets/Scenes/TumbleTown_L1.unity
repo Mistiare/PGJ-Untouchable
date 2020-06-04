@@ -729,18 +729,6 @@ Transform:
   m_Father: {fileID: 310985263}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &83002131 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9148724516198861646, guid: c72ca36893b230a43a3dd4d071907e7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1586799952}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &90161112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,18 +1779,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &217405179 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9148724516303445983, guid: c72ca36893b230a43a3dd4d071907e7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1586799952}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &221163701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8640,7 +8616,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ySensSlider
       value: 
-      objectReference: {fileID: 217405179}
+      objectReference: {fileID: 0}
     - target: {fileID: 1049161139090965584, guid: 361a3deefdc533841b8fb6f05171a58e,
         type: 3}
       propertyPath: xSens
@@ -8650,12 +8626,22 @@ PrefabInstance:
         type: 3}
       propertyPath: ySens
       value: 
-      objectReference: {fileID: 83002131}
+      objectReference: {fileID: 0}
     - target: {fileID: 1049161139090965584, guid: 361a3deefdc533841b8fb6f05171a58e,
         type: 3}
       propertyPath: cameraPoint
       value: 
       objectReference: {fileID: 266250156}
+    - target: {fileID: 1049161139090965584, guid: 361a3deefdc533841b8fb6f05171a58e,
+        type: 3}
+      propertyPath: sens
+      value: 
+      objectReference: {fileID: 1060560934}
+    - target: {fileID: 1049161139090965584, guid: 361a3deefdc533841b8fb6f05171a58e,
+        type: 3}
+      propertyPath: sensSlider
+      value: 
+      objectReference: {fileID: 1408043110}
     - target: {fileID: 1049161139090965585, guid: 361a3deefdc533841b8fb6f05171a58e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21976,6 +21962,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148724515572400608, guid: c72ca36893b230a43a3dd4d071907e7c,
+        type: 3}
+      propertyPath: m_Name
+      value: Sensitivity
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148724516942993812, guid: c72ca36893b230a43a3dd4d071907e7c,
+        type: 3}
+      propertyPath: m_Name
+      value: Sens
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148724516942993814, guid: c72ca36893b230a43a3dd4d071907e7c,
+        type: 3}
+      propertyPath: m_text
+      value: 'Sensitivity: '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c72ca36893b230a43a3dd4d071907e7c, type: 3}

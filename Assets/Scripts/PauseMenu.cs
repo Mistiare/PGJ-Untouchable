@@ -10,29 +10,21 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject optionsMenu = null;
     [SerializeField]
-    private Slider xSensSlider = null;
-    [SerializeField]
-    private Slider ySensSlider = null;
+    private Slider sensSlider = null;
     [SerializeField]
     private NewCameraController cameraPoint = null;
     [SerializeField]
-    private TextMeshProUGUI xSens = null;
-    [SerializeField]
-    private TextMeshProUGUI ySens = null;
+    private TextMeshProUGUI sens = null;
     private bool paused;
     private void Start()
     {
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
-        xSensSlider.minValue = 0.5f;
-        xSensSlider.maxValue = 5f;
-        ySensSlider.minValue = 0.01f;
-        ySensSlider.maxValue = 2f;
+        sensSlider.minValue = 0.5f;
+        sensSlider.maxValue = 3f;
+        sensSlider.value = 1f;
         paused = false;
-        xSensSlider.value = cameraPoint.rotateSpeed;
-        ySensSlider.value = cameraPoint.raiseSpeed;
-        xSens.SetText("X sensitivity: " + xSensSlider.value);
-        ySens.SetText("Y sensitivity: " + ySensSlider.value);
+        sens.SetText("Sensitivity: " + sensSlider.value);
     }
 
     void Update()
@@ -54,20 +46,14 @@ public class PauseMenu : MonoBehaviour
             paused = false;
         }
 
-        xSensSlider.value = Mathf.Round(xSensSlider.value * 100) / 100;
-        ySensSlider.value = Mathf.Round(ySensSlider.value * 100) / 100;
+        sensSlider.value = Mathf.Round(sensSlider.value * 100) / 100;
 
-        if(xSensSlider.value != cameraPoint.rotateSpeed)
+        if(sensSlider.value != cameraPoint.sensitivity)
         {
-            cameraPoint.rotateSpeed = xSensSlider.value;
-            xSens.SetText("X sensitivity: " + xSensSlider.value);
+            cameraPoint.sensitivity = sensSlider.value;
+            sens.SetText("Sensitivity: " + sensSlider.value);
         }
-        if(ySensSlider.value != cameraPoint.raiseSpeed)
-        {
-            cameraPoint.raiseSpeed = ySensSlider.value;
-            ySens.SetText("Y sensitivity: " + ySensSlider.value);
 
-        }
     }
 
     public void Continue()
