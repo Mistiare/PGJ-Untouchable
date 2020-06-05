@@ -10,11 +10,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 0;
     [SerializeField]
-    private float downDistance = 0;
-    [SerializeField]
     private Transform cameraPoint = null;
     [SerializeField]
     private float slowMoSpeed = 0f;
+    private bool touchingFloor;
 
 
     void FixedUpdate()
@@ -48,14 +47,9 @@ public class PlayerMovement : MonoBehaviour
         transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
 
-        Vector3 downPoint = new Vector3(transform.position.x, transform.position.y - downDistance, transform.position.z);
-        Debug.DrawLine(transform.position, downPoint, Color.red);
-
-        if (Input.GetKeyDown(KeyCode.Space) && Physics.Linecast(transform.position, downPoint))
+        if (Input.GetKey(KeyCode.Space) && touchingFloor)
         {
-           transform.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
-           //increase jump height if used
-           // transform.GetComponent<Rigidbody>().velocity = new Vector3(this.GetComponent<Rigidbody>().velocity.x, jumpHeight, this.GetComponent<Rigidbody>().velocity.z);
+            transform.GetComponent<Rigidbody>().velocity = (Vector3.up * jumpHeight);
         }
     }
 
@@ -76,6 +70,22 @@ public class PlayerMovement : MonoBehaviour
         {
             Time.timeScale = 1f;
             Time.fixedDeltaTime = 0.02f * 1f;
+        }
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Floor"))
+        {
+            touchingFloor = true;
+        }
+    }
+
+    public void OnCollisionExit(Collision other)
+    {
+        if (other.transform.CompareTag("Floor"))
+        {
+            touchingFloor = false;
         }
     }
 }
