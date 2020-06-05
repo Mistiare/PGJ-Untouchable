@@ -18,6 +18,8 @@ public class ShootingEnemy : EnemyAI
     protected float errorMargin;
     [SerializeField]
     private float bulletTimer = 0f;
+    [SerializeField]
+    private AudioClip[] gunShots = null;
 
     private void OnDrawGizmos()
     {
@@ -39,6 +41,7 @@ public class ShootingEnemy : EnemyAI
         {
             if (Time.time > nextFire)
             {
+                audioSource.PlayOneShot(gunShots[Random.Range(0, gunShots.Length)], 0.2f);
                 Vector3 shootDirection = player.transform.position + Random.insideUnitSphere * errorMargin - bulletSpawn.position;
                 nextFire = Time.time + fireRate;
                 GameObject bullet = Instantiate(projectile, bulletSpawn.position, bulletSpawn.rotation);

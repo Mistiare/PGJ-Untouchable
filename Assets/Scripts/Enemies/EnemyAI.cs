@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     protected float moveForce;
     [SerializeField]
     protected float jumpForce;
+    protected AudioSource audioSource;
 
 
     protected Vector3 playerDist;
@@ -60,6 +61,7 @@ public class EnemyAI : MonoBehaviour
         GameEvents.current.OnEnemyTriggerEnter += ChangeState;
         currentWayPoint = 0;
         moveDir = Vector3.zero;
+        audioSource = this.GetComponent<AudioSource>();
     }
 
     private void Update()
