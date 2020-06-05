@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-
+    [SerializeField]
+    private Transform[] scoreText;
 
 
     void Start()
@@ -15,5 +16,18 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadScores()
+    {
+
+    }
+
+    public void ResetScores()
+    {
+        for (int i = 0; i < scoreText.Length; i++)
+        {
+
+        }
     }
 }
