@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3300074760753298309}
   - component: {fileID: 5807178679186457011}
   - component: {fileID: 264506587369602378}
+  - component: {fileID: 6758206300723183197}
+  - component: {fileID: 6280672603405263807}
   m_Layer: 0
   m_Name: PRF_Church
   m_TagString: Untagged
@@ -79,3 +81,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6758206300723183197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988164800914934166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.619698, y: 10.694508, z: 9.553973}
+  m_Center: {x: -1.1497076, y: 5.347254, z: -6.1376166}
+--- !u!65 &6280672603405263807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988164800914934166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2944298, y: 4.9753456, z: 1.5929562}
+  m_Center: {x: -1.1206634, y: 2.4876728, z: -0.7466505}
