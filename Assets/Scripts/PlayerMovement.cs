@@ -44,19 +44,19 @@ public class PlayerMovement : MonoBehaviour
             moveVector.z -= cameraPoint.right.z;
         }
 
-        transform.GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
+        GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
 
         if (Input.GetKey(KeyCode.Space) && touchingFloor)
         {
-            transform.GetComponent<Rigidbody>().velocity = (Vector3.up * jumpHeight);
+            GetComponent<Rigidbody>().velocity = (new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, GetComponent<Rigidbody>().velocity.z));
         }
     }
 
 
     public void wind(Vector3 windDistance, float windSpeed)
     {
-        transform.GetComponent<Rigidbody>().AddForce(windDistance * windSpeed, ForceMode.Force);
+        GetComponent<Rigidbody>().AddForce(windDistance * windSpeed, ForceMode.Force);
     }
 
     private void Update()
