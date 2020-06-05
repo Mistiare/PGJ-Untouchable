@@ -121,9 +121,11 @@ MonoBehaviour:
   range: 1
   player: {fileID: 0}
   state: 0
-  id: 0
-  explosiveForce: 100
+  id: 1
+  explosiveForce: 1000
   explosiveRadius: 5
+  explosion: {fileID: 1463030426386280808, guid: 42aab50999cfa9d45881cbd0ece1ffe5,
+    type: 3}
 --- !u!54 &7160345358521526531
 Rigidbody:
   m_ObjectHideFlags: 0
