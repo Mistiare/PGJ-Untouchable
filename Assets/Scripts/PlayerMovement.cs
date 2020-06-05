@@ -70,10 +70,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             Time.timeScale = slowMoSpeed;
+            Time.fixedDeltaTime = 0.02f * slowMoSpeed;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             Time.timeScale = 1f;
+            Time.fixedDeltaTime = 0.02f * 1f;
         }
     }
 }
