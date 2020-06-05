@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float slowMoSpeed = 0f;
     private bool touchingFloor;
-
+    public bool canSlowMoRegen = true;
+    public bool canSlowMo = true;
 
     void FixedUpdate()
     {
@@ -61,15 +62,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && canSlowMo)
         {
             Time.timeScale = slowMoSpeed;
             Time.fixedDeltaTime = 0.02f * slowMoSpeed;
+            canSlowMoRegen = false;
+
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             Time.timeScale = 1f;
             Time.fixedDeltaTime = 0.02f * 1f;
+            canSlowMoRegen = true;
+        }
+        if (canSlowMo == false)
+        {
+            Time.timeScale = 1f;
+            Time.fixedDeltaTime = 0.02f * 1f;
+            canSlowMoRegen = true;
         }
     }
 
