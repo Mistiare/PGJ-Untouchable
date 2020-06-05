@@ -5909,6 +5909,11 @@ PrefabInstance:
       propertyPath: cameraPoint
       value: 
       objectReference: {fileID: 399909754}
+    - target: {fileID: 7502639147335719990, guid: aeb4ad99f7542644e9fcfded396d6ef4,
+        type: 3}
+      propertyPath: slowMoSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeb4ad99f7542644e9fcfded396d6ef4, type: 3}
 --- !u!1001 &439079559

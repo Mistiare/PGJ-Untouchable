@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private float downDistance = 0;
     [SerializeField]
     private Transform cameraPoint = null;
+    [SerializeField]
+    private float slowMoSpeed = 0f;
 
 
     void FixedUpdate()
@@ -61,5 +63,17 @@ public class PlayerMovement : MonoBehaviour
     public void wind(Vector3 windDistance, float windSpeed)
     {
         transform.GetComponent<Rigidbody>().AddForce(windDistance * windSpeed, ForceMode.Force);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Time.timeScale = slowMoSpeed;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Time.timeScale = 1f;
+        }
     }
 }
