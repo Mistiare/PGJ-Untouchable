@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExplodingEnemy : EnemyAI
 {
@@ -33,6 +34,7 @@ public class ExplodingEnemy : EnemyAI
             GameObject explosive = Instantiate(explosion, this.transform.position, this.transform.rotation);
             player.GetComponent<Rigidbody>().AddExplosionForce(explosiveForce, this.transform.position, explosiveRadius);
             Destroy(this.gameObject);
+            Destroy(player);
         }
     }
     protected override void ChangeState(int id)

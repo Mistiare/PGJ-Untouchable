@@ -19,12 +19,6 @@ public class ShootingEnemy : EnemyAI
     [SerializeField]
     private AudioClip[] gunShots = null;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(player.transform.position, errorMargin);
-    }
-
     protected override void Tartgeting()
     {
         Vector3 direction = player.transform.position - this.transform.position;
