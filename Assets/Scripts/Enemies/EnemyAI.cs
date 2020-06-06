@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     protected float jumpForce;
     protected AudioSource audioSource;
+    [SerializeField]
+    protected AudioMixerGroup sfxVolume;
 
 
     protected Vector3 playerDist;

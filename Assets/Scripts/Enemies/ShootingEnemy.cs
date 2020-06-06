@@ -41,7 +41,7 @@ public class ShootingEnemy : EnemyAI
         {
             if (Time.time > nextFire)
             {
-                audioSource.PlayOneShot(gunShots[Random.Range(0, gunShots.Length)], 0.2f);
+                audioSource.PlayOneShot(gunShots[Random.Range(0, gunShots.Length)]);
                 Vector3 shootDirection = player.transform.position + Random.insideUnitSphere * errorMargin - bulletSpawn.position;
                 nextFire = Time.time + fireRate;
                 GameObject bullet = Instantiate(projectile, bulletSpawn.position, bulletSpawn.rotation);
@@ -55,6 +55,7 @@ public class ShootingEnemy : EnemyAI
     {
         if (id == this.id)
         {
+            audioSource.outputAudioMixerGroup = sfxVolume;
             state = EnemyState.shooting;
         }
     }

@@ -179,6 +179,8 @@ MonoBehaviour:
   rotationSpeed: 10
   moveForce: 10
   jumpForce: 7
+  sfxVolume: {fileID: 5345785029725570356, guid: 4058528eb3a9c4a4a80f972466397de7,
+    type: 2}
   range: 30
   player: {fileID: 40186879399202477, guid: aeb4ad99f7542644e9fcfded396d6ef4, type: 3}
   state: 0
@@ -220,7 +222,8 @@ AudioSource:
   m_GameObject: {fileID: 1354246667638578834}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5345785029725570356, guid: 4058528eb3a9c4a4a80f972466397de7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
