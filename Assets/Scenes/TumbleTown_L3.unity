@@ -283,6 +283,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 144549b17438e4542b0fa64636d0f9a5, type: 3}
   - {fileID: 8300000, guid: 051574eaf6cd5ad47a03ae599a20a7af, type: 3}
   id: 1
+  voiceVolume: {fileID: 0}
 --- !u!1001 &6514023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7600,6 +7601,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4694342244289453657, guid: 27b4fffdadcd0064ab85886fc570cba6,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1905281978}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27b4fffdadcd0064ab85886fc570cba6, type: 3}
 --- !u!1001 &639035027
