@@ -21,6 +21,7 @@ public class VoiceLine : MonoBehaviour
         if (id == this.id)
         {
             audioSource.PlayOneShot(voiceLines[Random.Range(0, voiceLines.Length)]);
+            this.id = 0;
         }
     }
 }
