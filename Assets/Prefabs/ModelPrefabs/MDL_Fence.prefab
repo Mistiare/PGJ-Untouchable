@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1452336377160027635}
   - component: {fileID: 5123747645416517898}
   m_Layer: 0
-  m_Name: fence_4
+  m_Name: MDL_Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fa5c669d800ba3943b38bfeddb4c8d78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
