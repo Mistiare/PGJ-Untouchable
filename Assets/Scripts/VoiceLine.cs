@@ -13,7 +13,7 @@ public class VoiceLine : MonoBehaviour
     void Start()
     {
         GameEvents.current.OnVoiceTriggerEnter += PlayVoiceLine;
-        this.GetComponent<AudioSource>();
+        audioSource = this.GetComponent<AudioSource>();
     }
 
     private void PlayVoiceLine(int id)
