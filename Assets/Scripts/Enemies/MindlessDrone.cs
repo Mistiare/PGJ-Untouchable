@@ -50,5 +50,9 @@ public class MindlessDrone : MonoBehaviour
             moveDir.y = 0f;
             Debug.Log(collision.contacts);
         }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
