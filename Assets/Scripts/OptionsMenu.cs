@@ -13,6 +13,16 @@ public class OptionsMenu : MonoBehaviour
     private TextMeshProUGUI sens = null;
     [SerializeField]
     private AudioMixer audioMixer = null;
+    [SerializeField]
+    private Slider masterSlider = null;
+    [SerializeField]
+    private Slider sfxSlider = null;
+    [SerializeField]
+    private Slider voiceSlider = null;
+
+    private float currentMasterVolume;
+    private float currentSFXVolume;
+    private float currentVoiceVolume;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +31,15 @@ public class OptionsMenu : MonoBehaviour
         sensSlider.maxValue = 3f;
         sensSlider.value = PlayerPrefs.GetFloat("Sens");
         sens.SetText("Sensitivity: " + sensSlider.value);
+
+        audioMixer.GetFloat("MasterVolume", out currentMasterVolume);
+        audioMixer.GetFloat("SFXVolume", out currentSFXVolume);
+        audioMixer.GetFloat("VoiceLineVolume", out currentVoiceVolume);
+
+        masterSlider.value = currentMasterVolume;
+        sfxSlider.value = currentSFXVolume;
+        voiceSlider.value = currentVoiceVolume;
+
     }
 
     // Update is called once per frame

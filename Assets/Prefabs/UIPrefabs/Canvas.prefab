@@ -3295,6 +3295,9 @@ MonoBehaviour:
   cameraPoint: {fileID: 0}
   sens: {fileID: 4180853175761469619}
   audioMixer: {fileID: 24100000, guid: 4058528eb3a9c4a4a80f972466397de7, type: 2}
+  masterSlider: {fileID: 3443008227714575057}
+  sfxSlider: {fileID: 7884815719075616308}
+  voiceSlider: {fileID: 7919493254454301483}
 --- !u!1 &4180853175356470804
 GameObject:
   m_ObjectHideFlags: 0
