@@ -14,10 +14,19 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private int sceneID = 0;
 
+    private bool transition;
+    [SerializeField]
+    private float fadeSpeed;
+    [SerializeField]
+    private int nextScene = 0;
+    [SerializeField]
+    private Image fadeScreen = null;
+
 
     public void StartTimer()
     {
         isTiming = true;
+        transition = false;
         timerText.GetComponent<TMPro.TextMeshProUGUI>().text = "--:--:--";
     }
 
@@ -32,12 +41,24 @@ public class Timer : MonoBehaviour
             String text = string.Format("{0:00}:{1:00}:{2:00}", score.Minutes, score.Seconds, score.Milliseconds);
             timerText.GetComponent<TMPro.TextMeshProUGUI>().text = text;
         }
+
+        if (transition)
+        {
+            fadeScreen.color += new Color(0, 0, 0, fadeSpeed);
+
+            if (fadeScreen.color.a > 1)
+            {
+                transition = false;
+                SceneManager.LoadScene(nextScene);
+            }
+        }
     }
 
 
     public void EndTimer()
     {
         isTiming = false;
+        transition = true;
         float currentScore = PlayerPrefs.GetFloat(sceneID.ToString());
 
         if (currentScore == 0 || currentScore > timer)
