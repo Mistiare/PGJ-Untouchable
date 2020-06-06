@@ -61,7 +61,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (player == null)
         {
-            this.enabled = false;
+            this.gameObject.SetActive(false);
         }
         switch (state)
         {
