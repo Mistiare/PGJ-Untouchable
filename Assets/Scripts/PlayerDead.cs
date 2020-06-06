@@ -6,7 +6,7 @@ public class PlayerDead : MonoBehaviour
     [SerializeField]
     private GameObject gameOver = null;
     [SerializeField]
-    private GameObject player;
+    private GameObject player = null;
 
     private void Start()
     {
