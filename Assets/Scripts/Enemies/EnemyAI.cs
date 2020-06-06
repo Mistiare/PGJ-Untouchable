@@ -1,6 +1,4 @@
-﻿using UnityEditor;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
 public class EnemyAI : MonoBehaviour
