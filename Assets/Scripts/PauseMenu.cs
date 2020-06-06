@@ -9,22 +9,15 @@ public class PauseMenu : MonoBehaviour
     private GameObject pauseMenu = null;
     [SerializeField]
     private GameObject optionsMenu = null;
-    [SerializeField]
-    private Slider sensSlider = null;
-    [SerializeField]
-    private NewCameraController cameraPoint = null;
-    [SerializeField]
-    private TextMeshProUGUI sens = null;
+
     private bool paused;
+
     private void Start()
     {
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
-        sensSlider.minValue = 0.5f;
-        sensSlider.maxValue = 3f;
-        sensSlider.value = 1f;
-        paused = false;
-        sens.SetText("Sensitivity: " + sensSlider.value);
+
+        Time.timeScale = 1f;
     }
 
     void Update()
@@ -44,14 +37,6 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1f;
             Cursor.visible = false;
             paused = false;
-        }
-
-        sensSlider.value = Mathf.Round(sensSlider.value * 100) / 100;
-
-        if(sensSlider.value != cameraPoint.sensitivity)
-        {
-            cameraPoint.sensitivity = sensSlider.value;
-            sens.SetText("Sensitivity: " + sensSlider.value);
         }
 
     }

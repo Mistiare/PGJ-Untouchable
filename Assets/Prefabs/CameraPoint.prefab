@@ -127,9 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71f346f491d44f48a08e889b462c98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 793057331383809095, guid: aeb4ad99f7542644e9fcfded396d6ef4, type: 3}
   rotateSpeed: 3
   raiseSpeed: 0.1
   maxHeight: 2
   minHeight: 0.5
   targetHeight: 0.5
+  sensitivity: 1
