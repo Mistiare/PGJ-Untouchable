@@ -40,7 +40,7 @@ public class Timer : MonoBehaviour
         isTiming = false;
         float currentScore = PlayerPrefs.GetFloat(sceneID.ToString());
 
-        if (currentScore == 0 || currentScore < timer)
+        if (currentScore == 0 || currentScore > timer)
         {
             PlayerPrefs.SetFloat(sceneID.ToString(), timer);
         }
