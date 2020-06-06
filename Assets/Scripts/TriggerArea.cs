@@ -6,7 +6,10 @@ public class TriggerArea : MonoBehaviour
 {
     [SerializeField]
     private int id = 0;
-    private BoxCollider boxCollider;
+    [SerializeField]
+    private bool isVoice = false;
+    [SerializeField]
+    private bool isEnemy = false;
 
     private void OnDrawGizmos()
     {
@@ -18,7 +21,14 @@ public class TriggerArea : MonoBehaviour
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            GameEvents.current.EnemyTriggerEnter(id);
+            if (isEnemy)
+            {
+                GameEvents.current.EnemyTriggerEnter(id);
+            }
+            if (isVoice)
+            {
+                GameEvents.current.VoiceTriggerEnter(id);
+            }
         }
     }
 }

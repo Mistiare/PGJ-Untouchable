@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  isVoice: 0
+  isEnemy: 1
 --- !u!65 &8313394676299219530
 BoxCollider:
   m_ObjectHideFlags: 0
