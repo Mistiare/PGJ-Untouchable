@@ -7,6 +7,8 @@ public class VoiceLine : MonoBehaviour
     [SerializeField]
     private AudioClip[] voiceLines = null;
     private AudioSource audioSource = null;
+    [SerializeField]
+    private int id = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,9 @@ public class VoiceLine : MonoBehaviour
 
     private void PlayVoiceLine(int id)
     {
-        audioSource.PlayOneShot(voiceLines[Random.Range(0, voiceLines.Length)]);
+        if (id == this.id)
+        {
+            audioSource.PlayOneShot(voiceLines[Random.Range(0, voiceLines.Length)]);
+        }
     }
 }
