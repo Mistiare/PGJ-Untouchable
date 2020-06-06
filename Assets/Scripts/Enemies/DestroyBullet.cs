@@ -7,8 +7,6 @@ public class DestroyBullet : MonoBehaviour
     private float trailTimer = 0f;
     [SerializeField]
     private float playerForce = 0f;
-    [SerializeField]
-    private GameObject gameOver = null;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
