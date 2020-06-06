@@ -45,10 +45,12 @@ public class MindlessDrone : MonoBehaviour
     {
         if(collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
         {
-            Debug.Log("HElp");
             moveDir = Vector3.Reflect(moveDir, collision.contacts[0].normal);
             moveDir.y = 0f;
-            Debug.Log(collision.contacts);
+        }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

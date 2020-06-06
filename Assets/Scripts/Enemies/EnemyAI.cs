@@ -48,14 +48,6 @@ public class EnemyAI : MonoBehaviour
         exploding
     }
 
-
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(this.transform.position, transform.forward);
-    }
-
     private void Start()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -67,6 +59,10 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+        if (player == null)
+        {
+            this.gameObject.SetActive(false);
+        }
         switch (state)
         {
             default:

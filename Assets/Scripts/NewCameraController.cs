@@ -27,23 +27,26 @@ public class NewCameraController : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.position;
-
-        float newY = Input.GetAxis("Mouse X") * rotateSpeed * sensitivity;
-        transform.Rotate(new Vector3(0, newY, 0));
-
-        float newX = Input.GetAxis("Mouse Y") * raiseSpeed * sensitivity;
-
-        if (cam.position.y < transform.position.y + maxHeight && newX > 0)
+        if (player != null)
         {
-            cam.position += new Vector3(0, newX, 0);
-        }
+            transform.position = player.position;
 
-        if (cam.position.y > transform.position.y + minHeight && newX < 0)
-        {
-            cam.position += new Vector3(0, newX, 0);
-        }
+            float newY = Input.GetAxis("Mouse X") * rotateSpeed * sensitivity;
+            transform.Rotate(new Vector3(0, newY, 0));
 
-        cam.LookAt(new Vector3(transform.position.x, transform.position.y + targetHeight, transform.position.z));
+            float newX = Input.GetAxis("Mouse Y") * raiseSpeed * sensitivity;
+
+            if (cam.position.y < transform.position.y + maxHeight && newX > 0)
+            {
+                cam.position += new Vector3(0, newX, 0);
+            }
+
+            if (cam.position.y > transform.position.y + minHeight && newX < 0)
+            {
+                cam.position += new Vector3(0, newX, 0);
+            }
+
+            cam.LookAt(new Vector3(transform.position.x, transform.position.y + targetHeight, transform.position.z));
+        }       
     }
 }

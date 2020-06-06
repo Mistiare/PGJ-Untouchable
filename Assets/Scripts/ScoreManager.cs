@@ -12,11 +12,6 @@ public class ScoreManager : MonoBehaviour
     
     void Start()
     {
-        PlayerPrefs.SetFloat("1", 38.12354f);
-        PlayerPrefs.SetFloat("2", 645.12f);
-        PlayerPrefs.SetFloat("3", 3.356f);
-        PlayerPrefs.SetFloat("4", 12.3f);
-
         LoadScores();
     }
 
@@ -32,7 +27,6 @@ public class ScoreManager : MonoBehaviour
                 float seconds = PlayerPrefs.GetFloat(i.ToString());
 
                 TimeSpan score = TimeSpan.FromSeconds(seconds);
-                print(score);
                 newText = string.Format("{0:00}:{1:00}:{2:00}", score.Minutes, score.Seconds, score.Milliseconds);
                 
             }

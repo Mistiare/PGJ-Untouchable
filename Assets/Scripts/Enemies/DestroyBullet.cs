@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyBullet : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class DestroyBullet : MonoBehaviour
         {
             Debug.Log("Hit PLayer");
             collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * playerForce);
+            KillPlayer(collision.gameObject);
         }
         Destroy(this.gameObject);
     }
@@ -21,8 +21,10 @@ public class DestroyBullet : MonoBehaviour
     private void Update()
     {
         Destroy(this.GetComponent<TrailRenderer>(), trailTimer);
-
     }
 
-
+    private void KillPlayer(GameObject player)
+    {
+        Destroy(player);
+    }
 }
