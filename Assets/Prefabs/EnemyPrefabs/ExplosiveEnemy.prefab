@@ -127,8 +127,6 @@ MonoBehaviour:
   explosiveRadius: 5
   explosion: {fileID: 1463030426386280808, guid: 42aab50999cfa9d45881cbd0ece1ffe5,
     type: 3}
-  gameOver: {fileID: 1052351490565960383, guid: cd4c7b29bf243d546b73c54d9ee727cc,
-    type: 3}
 --- !u!54 &7160345358521526531
 Rigidbody:
   m_ObjectHideFlags: 0

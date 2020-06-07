@@ -51,6 +51,7 @@ public class ShootingEnemy : EnemyAI
         if (id == this.id)
         {
             audioSource.outputAudioMixerGroup = sfxVolume;
+            audioSource.spatialBlend = 1.0f;
             state = EnemyState.shooting;
         }
     }
