@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed = 0;
     [SerializeField]
+    private float speedAssist = 0;
+    [SerializeField]
     private float jumpHeight = 0;
     [SerializeField]
     private Transform cameraPoint = null;
@@ -15,13 +17,14 @@ public class PlayerMovement : MonoBehaviour
     private float downDistance = 0;
     [SerializeField]
     private float slowMoSpeed = 0f;
-    private bool colliding;
+    private int colliding;
     public bool canSlowMoRegen = true;
     public bool canSlowMo = true;
 
     void FixedUpdate()
     {
         moveVector = Vector3.zero;
+        float newSpeed = speed;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -52,13 +55,18 @@ public class PlayerMovement : MonoBehaviour
             moveVector *= (Mathf.Sqrt(2) / 2);
         }
 
-        GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
+        if (colliding != 0)
+        {
+            newSpeed *= speedAssist;
+        }
+
+        GetComponent<Rigidbody>().AddForce(moveVector * newSpeed, ForceMode.Force);
 
 
         Vector3 downPosition = new Vector3(transform.position.x, transform.position.y - downDistance, transform.position.z);
         Debug.DrawLine(transform.position, downPosition, Color.red);
 
-        if (Input.GetKey(KeyCode.Space) && colliding && Physics.Linecast(transform.position, downPosition))
+        if (Input.GetKey(KeyCode.Space) && colliding != 0 && Physics.Linecast(transform.position, downPosition))
         {
             GetComponent<Rigidbody>().velocity = (new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, GetComponent<Rigidbody>().velocity.z));
         }
@@ -95,11 +103,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        colliding = true;
+        colliding += 1;
     }
 
     public void OnCollisionExit(Collision other)
     {
-        colliding = false;
+        colliding -= 1;
     }
 }
