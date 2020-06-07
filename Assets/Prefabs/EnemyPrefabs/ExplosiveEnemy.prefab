@@ -114,7 +114,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
-  groundDistance: 1
+  groundDistance: 0.5
   rotationSpeed: 10
   moveForce: 10
   jumpForce: 8
