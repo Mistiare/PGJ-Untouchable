@@ -21,6 +21,8 @@ public class OptionsMenu : MonoBehaviour
     private Slider voiceSlider = null;
     [SerializeField]
     private Slider musicSlider = null;
+    [SerializeField]
+    private GameObject optionMenu = null;
 
     private float currentMasterVolume;
     private float currentSFXVolume;
@@ -91,5 +93,10 @@ public class OptionsMenu : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         audioMixer.SetFloat("MusicVolume", volume);
+    }
+
+    public void Menu()
+    {
+        optionMenu.SetActive(false);
     }
 }
