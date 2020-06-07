@@ -27,7 +27,7 @@ public class MindlessDrone : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
         moveDir = this.transform.forward; //new Vector3 (Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
-        if (ignoreCollider == null)
+        if (ignoreCollider != null)
         {
             Physics.IgnoreCollision(ignoreCollider.GetComponent<BoxCollider>(), this.GetComponent<CapsuleCollider>());
         }
