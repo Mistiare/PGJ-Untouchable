@@ -6964,6 +6964,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 53985196}
+    - target: {fileID: 1229672433170745565, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 7425398017947696890, guid: 5993546af462014498639b7aa8c8dc2a,
+        type: 3}
     - target: {fileID: 1229672433170745567, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: slowMo

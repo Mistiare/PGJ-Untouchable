@@ -4476,7 +4476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 138
+  m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &492492964
 PrefabInstance:
@@ -7356,7 +7356,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 131
+  m_RootOrder: 132
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!1001 &623956410
 PrefabInstance:
@@ -11953,7 +11953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 28.321001, y: -93.115005, z: -43.098003}
 --- !u!1 &1200921171
 GameObject:
@@ -12021,7 +12021,7 @@ Transform:
   - {fileID: 395903674}
   - {fileID: 381781423}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1205133593
 PrefabInstance:
@@ -16810,7 +16810,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 128
+  m_RootOrder: 129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1820511092
 Mesh:
@@ -19081,6 +19081,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1905281978}
+    - target: {fileID: 1229672433170745565, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 7425398017947696890, guid: 5993546af462014498639b7aa8c8dc2a,
+        type: 3}
     - target: {fileID: 1229672433170745567, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: slowMo
@@ -19139,7 +19145,7 @@ PrefabInstance:
     - target: {fileID: 1229672433313199267, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 135
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 1229672433313199267, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
