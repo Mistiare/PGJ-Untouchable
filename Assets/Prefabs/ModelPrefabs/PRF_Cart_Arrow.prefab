@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 3118792246985358040}
   - component: {fileID: 6202349186982265070}
   - component: {fileID: 373696317253827607}
+  - component: {fileID: 2702654233745279178}
+  - component: {fileID: 4898277984089885925}
+  - component: {fileID: 2959777472110390505}
   m_Layer: 0
   m_Name: PRF_Cart_Arrow
   m_TagString: Untagged
@@ -79,3 +82,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2702654233745279178
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095146751279958219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8996011972084103786, guid: 1e1efb665cd52664b9f4b164e590da1e, type: 3}
+--- !u!65 &4898277984089885925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095146751279958219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.83030987, y: 3.5157528, z: 2.5437887}
+  m_Center: {x: 0.008755684, y: 1.7507677, z: 1.0848151}
+--- !u!65 &2959777472110390505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095146751279958219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3787334, y: 1.499835, z: 4.4426723}
+  m_Center: {x: -0.003193736, y: 2.8142266, z: 1.4953272}
