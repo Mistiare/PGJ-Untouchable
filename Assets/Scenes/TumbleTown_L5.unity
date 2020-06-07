@@ -2342,7 +2342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1621540425}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &138674672
@@ -5870,17 +5870,17 @@ PrefabInstance:
     - target: {fileID: 8472951401032667487, guid: cd4c7b29bf243d546b73c54d9ee727cc,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8472951401032667487, guid: cd4c7b29bf243d546b73c54d9ee727cc,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8472951401032667487, guid: cd4c7b29bf243d546b73c54d9ee727cc,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd4c7b29bf243d546b73c54d9ee727cc, type: 3}
@@ -17657,7 +17657,7 @@ RectTransform:
   m_GameObject: {fileID: 1047426689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3999999, y: 2.3999999, z: 2.3999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1621540429}
   m_RootOrder: 1
@@ -20993,7 +20993,7 @@ RectTransform:
   m_GameObject: {fileID: 1213552161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3999999, y: 2.3999999, z: 2.3999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 100854362}
   - {fileID: 430273049}
@@ -24188,7 +24188,7 @@ RectTransform:
   m_GameObject: {fileID: 1400879519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3999999, y: 2.3999999, z: 2.3999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 391255456}
   - {fileID: 644424262}
