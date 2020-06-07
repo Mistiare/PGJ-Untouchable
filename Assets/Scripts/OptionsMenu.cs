@@ -59,7 +59,7 @@ public class OptionsMenu : MonoBehaviour
         if (sensSlider.value != cameraPoint.sensitivity)
         {
             cameraPoint.sensitivity = sensSlider.value;
-            sens.SetText("Sensitivity: " + sensSlider.value);
+            sens.SetText("" + sensSlider.value);
             PlayerPrefs.SetFloat("Sens", sensSlider.value);
         }
     }
