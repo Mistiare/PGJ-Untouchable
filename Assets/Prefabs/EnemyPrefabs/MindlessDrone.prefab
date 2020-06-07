@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 20
   jumpHeight: 7
-  groundDistance: 1
+  groundDistance: 0.1
   groundMask:
     serializedVersion: 2
     m_Bits: 1024

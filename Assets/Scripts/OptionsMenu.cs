@@ -19,10 +19,13 @@ public class OptionsMenu : MonoBehaviour
     private Slider sfxSlider = null;
     [SerializeField]
     private Slider voiceSlider = null;
+    [SerializeField]
+    private Slider musicSlider = null;
 
     private float currentMasterVolume;
     private float currentSFXVolume;
     private float currentVoiceVolume;
+    private float currentMusicVolume;
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +38,12 @@ public class OptionsMenu : MonoBehaviour
         audioMixer.GetFloat("MasterVolume", out currentMasterVolume);
         audioMixer.GetFloat("SFXVolume", out currentSFXVolume);
         audioMixer.GetFloat("VoiceLineVolume", out currentVoiceVolume);
+        audioMixer.GetFloat("MusicVolume", out currentMusicVolume);
 
         masterSlider.value = currentMasterVolume;
         sfxSlider.value = currentSFXVolume;
         voiceSlider.value = currentVoiceVolume;
+        musicSlider.value = currentMusicVolume;
 
     }
 
@@ -72,5 +77,10 @@ public class OptionsMenu : MonoBehaviour
     public void SetVoiceLineVolume(float volume)
     {
         audioMixer.SetFloat("VoiceLineVolume", volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVolume", volume);
     }
 }
