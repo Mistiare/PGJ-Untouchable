@@ -47,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
             moveVector.z -= cameraPoint.right.z;
         }
 
+        if (Vector3.Distance(moveVector, Vector3.zero) > 1.1)
+        {
+            moveVector *= (Mathf.Sqrt(2) / 2);
+        }
+
         GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
 
