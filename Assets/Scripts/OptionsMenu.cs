@@ -54,11 +54,20 @@ public class OptionsMenu : MonoBehaviour
     }
     private void SetSensitivity()
     {
-        sensSlider.value = Mathf.Round(sensSlider.value * 100) / 100;
-
-        if (sensSlider.value != cameraPoint.sensitivity)
+        if(cameraPoint != null)
         {
-            cameraPoint.sensitivity = sensSlider.value;
+            sensSlider.value = Mathf.Round(sensSlider.value * 100) / 100;
+
+            if (sensSlider.value != cameraPoint.sensitivity)
+            {
+                cameraPoint.sensitivity = sensSlider.value;
+                sens.SetText("" + sensSlider.value);
+                PlayerPrefs.SetFloat("Sens", sensSlider.value);
+            }
+        }
+        else if (cameraPoint == null)
+        {
+            sensSlider.value = Mathf.Round(sensSlider.value * 100) / 100;
             sens.SetText("" + sensSlider.value);
             PlayerPrefs.SetFloat("Sens", sensSlider.value);
         }
