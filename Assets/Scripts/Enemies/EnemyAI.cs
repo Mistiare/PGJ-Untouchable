@@ -51,10 +51,13 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        GameEvents.current.OnEnemyTriggerEnter += ChangeState;
         currentWayPoint = 0;
         moveDir = Vector3.zero;
         audioSource = this.GetComponent<AudioSource>();
+        if (player != null)
+        {
+            GameEvents.current.OnEnemyTriggerEnter += ChangeState;
+        }
     }
 
     private void Update()
@@ -83,16 +86,13 @@ public class EnemyAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player != null)
+        if (isMoving && isGrounded)
         {
-            if (isMoving && isGrounded)
-            {
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-            }
-            if (isMoving)
-            {
-                rb.AddForce(moveDir * moveForce);
-            }
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+        }
+        if (isMoving)
+        {
+            rb.AddForce(moveDir * moveForce);
         }
     }
 
