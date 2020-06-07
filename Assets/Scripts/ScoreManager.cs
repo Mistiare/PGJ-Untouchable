@@ -8,8 +8,10 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField]
     private Transform[] scoreText = null;
+    [SerializeField]
+    private Transform totalText = null;
 
-    
+
     void Start()
     {
         LoadScores();
@@ -18,6 +20,8 @@ public class ScoreManager : MonoBehaviour
 
     public void LoadScores()
     {
+        float totalTime = 0;
+
         for (int i = 1; i < scoreText.Length + 1; i++)
         {
             string newText;
@@ -25,6 +29,7 @@ public class ScoreManager : MonoBehaviour
             if (PlayerPrefs.HasKey(i.ToString()))
             {
                 float seconds = PlayerPrefs.GetFloat(i.ToString());
+                totalTime += seconds;
 
                 TimeSpan score = TimeSpan.FromSeconds(seconds);
                 newText = string.Format("{0:00}:{1:00}:{2:00}", score.Minutes, score.Seconds, score.Milliseconds);
@@ -38,6 +43,10 @@ public class ScoreManager : MonoBehaviour
 
             scoreText[i - 1].GetComponent<TMPro.TextMeshProUGUI>().text = newText;
         }
+
+        TimeSpan totalScore = TimeSpan.FromSeconds(totalTime);
+        String totalTextText = string.Format("{0:00}:{1:00}:{2:00}", totalScore.Minutes, totalScore.Seconds, totalScore.Milliseconds);
+        totalText.GetComponent<TMPro.TextMeshProUGUI>().text = totalTextText;
     }
 
     public void ResetScores()

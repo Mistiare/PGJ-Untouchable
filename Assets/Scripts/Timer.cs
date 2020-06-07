@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     private bool transition;
     [SerializeField]
-    private float fadeSpeed;
+    private float fadeSpeed = 0;
     [SerializeField]
     private int nextScene = 0;
     [SerializeField]
