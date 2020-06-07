@@ -10,6 +10,12 @@ public class MenuController : MonoBehaviour
     private GameObject[] uis = null;
     public PlayableDirector timeline;
 
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     public void Menu()
     {
         ShowUI(0);
