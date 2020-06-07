@@ -18475,6 +18475,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1229672433042295510, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1229672433170745564, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: cameraPoint
@@ -18490,6 +18495,21 @@ PrefabInstance:
       propertyPath: slowMo
       value: 
       objectReference: {fileID: 475602850}
+    - target: {fileID: 1229672433247944670, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433247944670, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433247944670, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1229672433313199267, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18600,6 +18620,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1229672433417186946, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433417186946, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1229672433427086086, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -18630,6 +18660,56 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1229672433531162271, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433531162271, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433576699728, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433576699728, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433583885853, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433583885853, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433583885853, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433667123944, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433667123944, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229672433667123944, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1229672434104784734, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -18660,6 +18740,11 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1229672434365055166, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1229672434456222073, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -18713,6 +18798,21 @@ PrefabInstance:
     - target: {fileID: 1229672434505258427, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316306269505263116, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316306269505263116, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316306269505263116, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3556833640404014654, guid: a7725c54d91b5ea4099cf8138632dcbb,
@@ -18758,6 +18858,16 @@ PrefabInstance:
     - target: {fileID: 4802887172758946034, guid: a7725c54d91b5ea4099cf8138632dcbb,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585188560984217505, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585188560984217505, guid: a7725c54d91b5ea4099cf8138632dcbb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
