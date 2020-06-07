@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] uis = null;
+    public PlayableDirector timeline;
 
+    public void Start()
+    {
+        timeline = GetComponent<PlayableDirector>();
+    }
 
     public void Menu()
     {
@@ -22,6 +28,7 @@ public class MenuController : MonoBehaviour
     public void LevelSelect()
     {
         ShowUI(1);
+        timeline.Play();
     }
 
     public void Options()
