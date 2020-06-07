@@ -59,38 +59,40 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        if (player == null)
+        if (player != null)
         {
-            this.gameObject.SetActive(false);
-        }
-        switch (state)
-        {
-            default:
-            case EnemyState.patrol:
-                NextWayPoint();
-                break;
-            case EnemyState.shooting:
-                moveDir = Vector3.zero;
-                isMoving = false;
-                Tartgeting();
-                break;
-            case EnemyState.exploding:
-                Exploding();
-                break;
-        }
+            switch (state)
+            {
+                default:
+                case EnemyState.patrol:
+                    NextWayPoint();
+                    break;
+                case EnemyState.shooting:
+                    moveDir = Vector3.zero;
+                    isMoving = false;
+                    Tartgeting();
+                    break;
+                case EnemyState.exploding:
+                    Exploding();
+                    break;
+            }
 
-        isGrounded = Physics.Raycast(this.transform.position, Vector3.down, groundDistance, groundMask);
+            isGrounded = Physics.Raycast(this.transform.position, Vector3.down, groundDistance, groundMask);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (isMoving && isGrounded)
+        if (player != null)
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-        }
-        if (isMoving)
-        {
-            rb.AddForce(moveDir * moveForce);
+            if (isMoving && isGrounded)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            }
+            if (isMoving)
+            {
+                rb.AddForce(moveDir * moveForce);
+            }
         }
     }
 
