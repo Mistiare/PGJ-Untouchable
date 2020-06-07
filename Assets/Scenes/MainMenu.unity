@@ -5631,6 +5631,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1110496108}
     m_Modifications:
+    - target: {fileID: 356200035581005064, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1110496109}
+    - target: {fileID: 356200035581005064, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 735976420864841388, guid: 377c014806aeb3641be344be67e8e589,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -6116,6 +6126,11 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4270426779085343798, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4852516648218482433, guid: 377c014806aeb3641be344be67e8e589,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -6145,6 +6160,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316048753783099538, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316048753783099538, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316048753783099538, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316048753783099538, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316048753783099538, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -78.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316048753783099538, guid: 377c014806aeb3641be344be67e8e589,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -186.2
       objectReference: {fileID: 0}
     - target: {fileID: 8743283304395478191, guid: 377c014806aeb3641be344be67e8e589,
         type: 3}
