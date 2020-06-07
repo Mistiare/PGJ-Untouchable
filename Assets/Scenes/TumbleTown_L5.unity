@@ -26573,13 +26573,19 @@ PrefabInstance:
     - target: {fileID: 7160345358521526543, guid: c5269c854e2e88a4da9e2f76cd3b908f,
         type: 3}
       propertyPath: id
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7160345358521526543, guid: c5269c854e2e88a4da9e2f76cd3b908f,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 53985196}
+    - target: {fileID: 7160345358521526543, guid: c5269c854e2e88a4da9e2f76cd3b908f,
+        type: 3}
+      propertyPath: sfxVolume
+      value: 
+      objectReference: {fileID: 5345785029725570356, guid: 4058528eb3a9c4a4a80f972466397de7,
+        type: 2}
     - target: {fileID: 7160345359022559952, guid: c5269c854e2e88a4da9e2f76cd3b908f,
         type: 3}
       propertyPath: m_LocalPosition.x
