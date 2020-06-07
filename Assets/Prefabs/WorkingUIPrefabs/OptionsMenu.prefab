@@ -535,7 +535,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 4852516648218482433}
   m_HandleRect: {fileID: 735976420864841388}
   m_Direction: 0
-  m_MinValue: -79
+  m_MinValue: -70
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 4252302329021091391}
   m_HandleRect: {fileID: 4252302329421294152}
   m_Direction: 0
-  m_MinValue: -79
+  m_MinValue: -70
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 4252302329166081570}
   m_HandleRect: {fileID: 4252302329807388542}
   m_Direction: 0
-  m_MinValue: -79
+  m_MinValue: -70
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -2133,7 +2133,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 4252302329325594608}
   m_HandleRect: {fileID: 4252302329337007805}
   m_Direction: 0
-  m_MinValue: -79
+  m_MinValue: -70
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -3556,7 +3556,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: 0
