@@ -10,11 +10,6 @@ public class MenuController : MonoBehaviour
     private GameObject[] uis = null;
     public PlayableDirector timeline;
 
-    public void Start()
-    {
-        timeline = GetComponent<PlayableDirector>();
-    }
-
     public void Menu()
     {
         ShowUI(0);
@@ -27,7 +22,7 @@ public class MenuController : MonoBehaviour
 
     public void LevelSelect()
     {
-        ShowUI(1);
+        //ShowUI(1);
         timeline.Play();
     }
 
