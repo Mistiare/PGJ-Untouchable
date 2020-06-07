@@ -65,6 +65,7 @@ MonoBehaviour:
   jumpHeight: 7
   cameraPoint: {fileID: 6008020578613624500, guid: d21c7e37969232442b5edda1831fa38d,
     type: 3}
+  downDistance: 0.5
   slowMoSpeed: 0.2
   canSlowMoRegen: 1
   canSlowMo: 1

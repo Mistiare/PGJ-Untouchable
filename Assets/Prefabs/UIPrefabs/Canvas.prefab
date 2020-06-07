@@ -3262,8 +3262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3282f6af91df24f44981455f4e539021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 4180853175434346646}
-  optionsMenu: {fileID: 4180853175761469617}
+  pauseMenu: {fileID: 4180853175384689512}
+  optionsMenu: {fileID: 4180853174726039630}
 --- !u!114 &4180853175304954455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3293,13 +3293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eaeb0c1d81edfc45b8a0753a6213a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensSlider: {fileID: 4180853175761469618}
+  sensSlider: {fileID: 0}
   cameraPoint: {fileID: 0}
-  sens: {fileID: 4180853175761469619}
+  sens: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 4058528eb3a9c4a4a80f972466397de7, type: 2}
-  masterSlider: {fileID: 3443008227714575057}
-  sfxSlider: {fileID: 7884815719075616308}
-  voiceSlider: {fileID: 7919493254454301483}
+  masterSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
+  voiceSlider: {fileID: 0}
 --- !u!114 &4694342244289453657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5695,7 +5695,7 @@ PrefabInstance:
     - target: {fileID: 2327452577586050831, guid: cd4c7b29bf243d546b73c54d9ee727cc,
         type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2327452577586050831, guid: cd4c7b29bf243d546b73c54d9ee727cc,
         type: 3}

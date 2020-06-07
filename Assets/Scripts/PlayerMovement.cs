@@ -12,8 +12,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform cameraPoint = null;
     [SerializeField]
+    private float downDistance = 0;
+    [SerializeField]
     private float slowMoSpeed = 0f;
-    private bool touchingFloor;
+    private bool colliding;
     public bool canSlowMoRegen = true;
     public bool canSlowMo = true;
 
@@ -48,7 +50,10 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(moveVector * speed, ForceMode.Force);
 
 
-        if (Input.GetKey(KeyCode.Space) && touchingFloor)
+        Vector3 downPosition = new Vector3(transform.position.x, transform.position.y - downDistance, transform.position.z);
+        Debug.DrawLine(transform.position, downPosition, Color.red);
+
+        if (Input.GetKey(KeyCode.Space) && colliding && Physics.Linecast(transform.position, downPosition))
         {
             GetComponent<Rigidbody>().velocity = (new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, GetComponent<Rigidbody>().velocity.z));
         }
@@ -85,17 +90,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.transform.CompareTag("Floor"))
-        {
-            touchingFloor = true;
-        }
+        colliding = true;
     }
 
     public void OnCollisionExit(Collision other)
     {
-        if (other.transform.CompareTag("Floor"))
-        {
-            touchingFloor = false;
-        }
+        colliding = false;
     }
 }
