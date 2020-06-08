@@ -15,6 +15,7 @@ public class PlayerDead : MonoBehaviour
     private bool oneShot;
     [SerializeField]
     private float fadeSpeed = 0;
+    private float fade = -1;
     [SerializeField]
     private Image fadeScreen = null;
 
@@ -32,7 +33,8 @@ public class PlayerDead : MonoBehaviour
         }
         if (player == null)
         {
-            fadeScreen.color += new Color(0, 0, 0, fadeSpeed);
+            fade += fadeSpeed;
+            fadeScreen.color = new Color(0, 0, 0, fade);
 
             if (fadeScreen.color.a > 1)
             {
