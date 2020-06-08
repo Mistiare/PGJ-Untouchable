@@ -21,7 +21,7 @@ public class NewCameraController : MonoBehaviour
 
     void Start()
     {
-        cam = transform.GetChild(0);
+        cam = transform.GetChild(0);        
     }
 
 
@@ -29,6 +29,8 @@ public class NewCameraController : MonoBehaviour
     {
         if (player != null && Time.timeScale != 0)
         {
+            Cursor.lockState = CursorLockMode.Locked;
+
             transform.position = player.position;
 
             float newY = Input.GetAxis("Mouse X") * rotateSpeed * sensitivity;
@@ -47,6 +49,11 @@ public class NewCameraController : MonoBehaviour
             }
 
             cam.LookAt(new Vector3(transform.position.x, transform.position.y + targetHeight, transform.position.z));
-        }       
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
 }
