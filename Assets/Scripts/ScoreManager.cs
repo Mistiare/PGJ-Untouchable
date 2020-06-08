@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
     private Transform[] scoreText = null;
     [SerializeField]
     private Transform totalText = null;
+    [SerializeField]
+    private GameObject[] steveStars = null;
 
 
     void Start()
@@ -42,6 +44,19 @@ public class ScoreManager : MonoBehaviour
             }
 
             scoreText[i - 1].GetComponent<TMPro.TextMeshProUGUI>().text = newText;
+
+
+            string steveKey = "S" + i.ToString();
+
+            if (PlayerPrefs.HasKey(steveKey) && PlayerPrefs.GetInt(steveKey) == 1)
+            {
+                steveStars[i - 1].SetActive(true);
+            }
+
+            else
+            {
+                steveStars[i - 1].SetActive(false);
+            }
         }
 
         TimeSpan totalScore = TimeSpan.FromSeconds(totalTime);
