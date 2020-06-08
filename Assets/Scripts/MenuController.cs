@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] uis = null;
     public PlayableDirector timeline;
+    private bool reverse = false;
 
     private void Start()
     {
@@ -30,6 +32,14 @@ public class MenuController : MonoBehaviour
     {
         //ShowUI(1);
         timeline.Play();
+    }
+
+    public void BackLevelSelect()
+    {
+        timeline.Stop();
+        timeline.time = timeline.playableAsset.duration - 0.01;
+        timeline.Evaluate();
+        reverse = true;
     }
 
     public void Options()
@@ -56,5 +66,25 @@ public class MenuController : MonoBehaviour
         }
 
         uis[UI].SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (reverse)
+        {
+            double t = timeline.time - Time.deltaTime;
+            if (t < 0)
+            {
+                t = 0;
+            }
+            timeline.time = t;
+            timeline.Evaluate();
+
+            if (t == 0)
+            {
+                timeline.Stop();
+                reverse = false;
+            }
+        }
     }
 }
