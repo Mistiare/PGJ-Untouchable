@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerDead : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class PlayerDead : MonoBehaviour
     private Vector3 position;
     private Quaternion rotation;
     private bool oneShot;
+    [SerializeField]
+    private float fadeSpeed = 0;
+    [SerializeField]
+    private Image fadeScreen = null;
 
     private void Start()
     {
@@ -23,17 +28,23 @@ public class PlayerDead : MonoBehaviour
     {
         if (player == null)
         {
-            gameOver.SetActive(true);
+            fadeScreen.color += new Color(0, 0, 0, fadeSpeed);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (fadeScreen.color.a > 1)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+                gameOver.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                SceneManager.LoadScene(0);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    SceneManager.LoadScene(0);
+                }
             }
+            
 
             if (oneShot)
             {

@@ -15,12 +15,19 @@ public class Timer : MonoBehaviour
     private int sceneID = 0;
 
     private bool transition;
+    public bool startUp;
     [SerializeField]
     private float fadeSpeed = 0;
     [SerializeField]
     private int nextScene = 0;
     [SerializeField]
     private Image fadeScreen = null;
+
+
+    void Start()
+    {
+        startUp = true;
+    }
 
 
     public void StartTimer()
@@ -33,6 +40,16 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        if (startUp)
+        {
+            fadeScreen.color -= new Color(0, 0, 0, fadeSpeed);
+
+            if (fadeScreen.color.a == 0)
+            {
+                startUp = false;
+            }
+        }
+
         if (isTiming)
         {
             timer += Time.deltaTime;
