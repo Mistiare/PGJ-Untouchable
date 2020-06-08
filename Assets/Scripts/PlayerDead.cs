@@ -26,6 +26,10 @@ public class PlayerDead : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Destroy(player);
+        }
         if (player == null)
         {
             fadeScreen.color += new Color(0, 0, 0, fadeSpeed);
