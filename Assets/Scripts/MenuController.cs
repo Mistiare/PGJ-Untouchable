@@ -11,7 +11,6 @@ public class MenuController : MonoBehaviour
     private GameObject[] uis = null;
     public PlayableDirector timeline;
     private bool reverse = false;
-    private bool forward = false;
 
     private void Start()
     {
@@ -32,11 +31,7 @@ public class MenuController : MonoBehaviour
     public void LevelSelect()
     {
         //ShowUI(1);
-        //timeline.Play();
-        timeline.Stop();
-        timeline.time = 0;
-        timeline.Evaluate();
-        forward = true;
+        timeline.Play();
     }
 
     public void BackLevelSelect()
@@ -89,23 +84,6 @@ public class MenuController : MonoBehaviour
             {
                 timeline.Stop();
                 reverse = false;
-            }
-        }
-
-        if (forward)
-        {
-            double t = timeline.time + Time.deltaTime;
-            if (t > 8)
-            {
-                t = 8;
-            }
-            timeline.time = t;
-            timeline.Evaluate();
-
-            if (t == 8)
-            {
-                timeline.Stop();
-                forward = false;
             }
         }
     }
