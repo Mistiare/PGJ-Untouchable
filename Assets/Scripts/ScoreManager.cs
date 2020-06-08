@@ -74,6 +74,9 @@ public class ScoreManager : MonoBehaviour
             }
 
             scoreText[i -1].GetComponent<TMPro.TextMeshProUGUI>().text = "--:--:--";
+            
+            string steveKey = "S" + i.ToString();
+            PlayerPrefs.SetInt(steveKey, 0);
         }
 
         LoadScores();

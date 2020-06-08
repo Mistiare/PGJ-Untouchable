@@ -27,7 +27,7 @@ public class NewCameraController : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (player != null && Time.timeScale != 0)
         {
             transform.position = player.position;
 
