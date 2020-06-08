@@ -15,7 +15,7 @@ public class windInfo : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (colliding)
+        if (colliding && player != null)
         {
             Vector3 pointX = transform.TransformPoint(direction);           
             pointX -= transform.position;
