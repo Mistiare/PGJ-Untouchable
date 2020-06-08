@@ -7356,7 +7356,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 133
+  m_RootOrder: 134
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!1001 &623956410
 PrefabInstance:
@@ -11953,7 +11953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 28.321001, y: -93.115005, z: -43.098003}
 --- !u!1 &1200921171
 GameObject:
@@ -12021,7 +12021,7 @@ Transform:
   - {fileID: 395903674}
   - {fileID: 381781423}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1205133593
 PrefabInstance:
@@ -20381,22 +20381,27 @@ PrefabInstance:
     - target: {fileID: 6032542013730237341, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6032542013730237341, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6032542013730237341, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6032542013730237341, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032542013730237341, guid: 2089e578e19ffcb4484fce8defad828b,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 3.0654337
       objectReference: {fileID: 0}
     - target: {fileID: 6032542013730237342, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
@@ -20461,7 +20466,7 @@ PrefabInstance:
     - target: {fileID: 6032542013730237342, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 6032542013730237342, guid: 2089e578e19ffcb4484fce8defad828b,
         type: 3}
@@ -20893,7 +20898,7 @@ RectTransform:
   - {fileID: 1229672434885108074}
   - {fileID: 1229672433142690410}
   m_Father: {fileID: 0}
-  m_RootOrder: 136
+  m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
