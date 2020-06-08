@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
     public bool startUp;
     [SerializeField]
     private float fadeSpeed = 0;
+    private float fade = 0;
     [SerializeField]
     private int nextScene = 0;
     [SerializeField]
@@ -61,7 +62,9 @@ public class Timer : MonoBehaviour
 
         if (transition)
         {
-            fadeScreen.color += new Color(0, 0, 0, fadeSpeed);
+            fade += fadeSpeed;
+            print(fade);
+            fadeScreen.color = new Color(0, 0, 0, fade);
 
             if (fadeScreen.color.a > 1)
             {
