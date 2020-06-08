@@ -23,6 +23,9 @@ public class Timer : MonoBehaviour
     private int nextScene = 0;
     [SerializeField]
     private Image fadeScreen = null;
+    
+    [SerializeField]
+    private Transform steve;
 
 
     void Start()
@@ -85,5 +88,7 @@ public class Timer : MonoBehaviour
         {
             PlayerPrefs.SetFloat(sceneID.ToString(), timer);
         }
+
+        steve.GetComponent<Steve>().setStar();
     }
 }

@@ -2975,6 +2975,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steveID: 3
+--- !u!4 &228774576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2918463099052096976, guid: 0b5f84d0b500a234f9e3aef772fe7527,
+    type: 3}
+  m_PrefabInstance: {fileID: 228774573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &249690114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18552,6 +18558,11 @@ PrefabInstance:
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 2087375705}
+    - target: {fileID: 6191711394714426010, guid: 29432a05a42bf164685a7836a81cbecf,
+        type: 3}
+      propertyPath: steve
+      value: 
+      objectReference: {fileID: 228774576}
     - target: {fileID: 6191711394714426011, guid: 29432a05a42bf164685a7836a81cbecf,
         type: 3}
       propertyPath: m_LocalPosition.x

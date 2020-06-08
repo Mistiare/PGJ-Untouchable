@@ -6,6 +6,7 @@ public class TimerTrigger : MonoBehaviour
 {
     public enum triggerStates {Start, Finish}
     public triggerStates triggerID;
+    
 
 
     public void OnTriggerEnter(Collider other)

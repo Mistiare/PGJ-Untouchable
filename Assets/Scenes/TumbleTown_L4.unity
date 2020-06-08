@@ -977,7 +977,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 135
+  m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &101113462
 PrefabInstance:
@@ -4586,6 +4586,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steveID: 4
+--- !u!4 &546997456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2918463099052096976, guid: 0b5f84d0b500a234f9e3aef772fe7527,
+    type: 3}
+  m_PrefabInstance: {fileID: 546997453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &585500939
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,7 +6722,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &899732687
 GameObject:
@@ -8497,7 +8503,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1198577099
 PrefabInstance:
@@ -12290,7 +12296,7 @@ Transform:
   - {fileID: 73677613}
   - {fileID: 679809243}
   m_Father: {fileID: 0}
-  m_RootOrder: 125
+  m_RootOrder: 127
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1591430149
 PrefabInstance:
@@ -12882,6 +12888,11 @@ PrefabInstance:
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 263909269}
+    - target: {fileID: 6191711394714426010, guid: 29432a05a42bf164685a7836a81cbecf,
+        type: 3}
+      propertyPath: steve
+      value: 
+      objectReference: {fileID: 546997456}
     - target: {fileID: 6191711394714426011, guid: 29432a05a42bf164685a7836a81cbecf,
         type: 3}
       propertyPath: m_LocalPosition.x

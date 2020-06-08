@@ -28479,6 +28479,11 @@ PrefabInstance:
       propertyPath: sceneID
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6191711394714426010, guid: 29432a05a42bf164685a7836a81cbecf,
+        type: 3}
+      propertyPath: steve
+      value: 
+      objectReference: {fileID: 1737467191}
     - target: {fileID: 6191711394714426011, guid: 29432a05a42bf164685a7836a81cbecf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29126,7 +29131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 299
+  m_RootOrder: 300
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1683389752
 PrefabInstance:
@@ -30026,6 +30031,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steveID: 5
+--- !u!4 &1737467191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2918463099052096976, guid: 0b5f84d0b500a234f9e3aef772fe7527,
+    type: 3}
+  m_PrefabInstance: {fileID: 1737467188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1743231167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31745,7 +31756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 137
+  m_RootOrder: 138
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1804363662
 MonoBehaviour:
