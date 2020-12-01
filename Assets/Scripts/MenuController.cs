@@ -23,7 +23,7 @@ public class MenuController : MonoBehaviour
         ShowUI(0);
     }
 
-    public void Continue()
+    public void Reload()
     {
 
     }
@@ -70,6 +70,11 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+
         if (reverse)
         {
             double t = timeline.time - Time.deltaTime;
