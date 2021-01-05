@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Timer : MonoBehaviour
     private bool isTiming;
     [SerializeField]
     private Transform timerText = null;
+    private TextMeshProUGUI timerTextText;
     [SerializeField]
     private int sceneID = 0;
 
@@ -31,6 +33,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         startUp = true;
+
+        timerTextText = timerText.GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -38,7 +42,7 @@ public class Timer : MonoBehaviour
     {
         isTiming = true;
         transition = false;
-        timerText.GetComponent<TMPro.TextMeshProUGUI>().text = "--:--:--";
+        timerTextText.text = "--:--:--";
     }
 
 
@@ -60,7 +64,7 @@ public class Timer : MonoBehaviour
 
             TimeSpan score = TimeSpan.FromSeconds(timer);
             String text = string.Format("{0:00}:{1:00}:{2:00}", score.Minutes, score.Seconds, score.Milliseconds);
-            timerText.GetComponent<TMPro.TextMeshProUGUI>().text = text;
+            timerTextText.text = text;
         }
 
         if (transition)

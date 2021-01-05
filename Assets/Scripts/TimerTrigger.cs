@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class TimerTrigger : MonoBehaviour
 {
-    public enum triggerStates {Start, Finish}
-    public triggerStates triggerID;
+    [SerializeField]
+    private bool isStart;
     
-
 
     public void OnTriggerEnter(Collider other)
     {
-        if (triggerID == triggerStates.Start)
+        if (isStart)
         {
             transform.parent.GetComponent<Timer>().StartTimer();
         }
 
-        if (triggerID == triggerStates.Finish)
+        else
         {
             transform.parent.GetComponent<Timer>().EndTimer();
         }

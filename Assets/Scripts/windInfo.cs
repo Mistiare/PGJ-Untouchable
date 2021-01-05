@@ -10,7 +10,14 @@ public class windInfo : MonoBehaviour
     private float speed = 0;
     [SerializeField]
     private Transform player = null;
+    private PlayerMovement playerScript;
     private bool colliding;
+
+
+    void Start()
+    {
+        playerScript = player.GetComponent<PlayerMovement>();
+    }
 
 
     void FixedUpdate()
@@ -20,7 +27,7 @@ public class windInfo : MonoBehaviour
             Vector3 pointX = transform.TransformPoint(direction);           
             pointX -= transform.position;
 
-            player.GetComponent<PlayerMovement>().wind(pointX, speed);
+            playerScript.wind(pointX, speed);
         }
     }
 

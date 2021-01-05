@@ -47,9 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
   sceneID: 0
+  startUp: 0
   fadeSpeed: 0.01
   nextScene: 0
   fadeScreen: {fileID: 0}
+  steve: {fileID: 0}
 --- !u!1 &6191711394787502193
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345a7dead879029448f3b939234f71a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerID: 1
+  isStart: 0
 --- !u!1 &6191711395206244398
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,4 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345a7dead879029448f3b939234f71a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerID: 0
+  isStart: 1

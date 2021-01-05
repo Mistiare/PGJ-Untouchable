@@ -20,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
     private int colliding;
     public bool canSlowMoRegen = true;
     public bool canSlowMo = true;
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void FixedUpdate()
     {
@@ -50,32 +56,28 @@ public class PlayerMovement : MonoBehaviour
             moveVector.z -= cameraPoint.right.z;
         }
 
-        if (Vector3.Distance(moveVector, Vector3.zero) > 1.1)
-        {
-            moveVector *= (Mathf.Sqrt(2) / 2);
-        }
+        moveVector.Normalize();
 
         if (colliding != 0)
         {
             newSpeed *= speedAssist;
         }
 
-        GetComponent<Rigidbody>().AddForce(moveVector * newSpeed, ForceMode.Force);
-
+        rb.AddForce(moveVector * newSpeed, ForceMode.Force);
 
         Vector3 downPosition = new Vector3(transform.position.x, transform.position.y - downDistance, transform.position.z);
         Debug.DrawLine(transform.position, downPosition, Color.red);
 
         if (Input.GetKey(KeyCode.Space) && colliding != 0 && Physics.Linecast(transform.position, downPosition))
         {
-            GetComponent<Rigidbody>().velocity = (new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, GetComponent<Rigidbody>().velocity.z));
+            rb.velocity = (new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z));
         }
     }
 
 
     public void wind(Vector3 windDistance, float windSpeed)
     {
-        GetComponent<Rigidbody>().AddForce(windDistance * windSpeed, ForceMode.Force);
+        rb.AddForce(windDistance * windSpeed, ForceMode.Force);
     }
 
     private void Update()
